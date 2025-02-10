@@ -7,7 +7,13 @@ mongoose.connect(DB_URL,{
     useUnifiedTopology:true
 })
 //Get the default conenction
-const db = mongoose.connection;
+//const db = mongoose.connection;
+
+const db = async () => {
+    try {
+      const conn = await mongoose.connect(process.env.MONGO_URI);
+    }
+  }
 
 
 db.on('connected',() => {
