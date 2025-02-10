@@ -20,16 +20,16 @@ const db = async () => {
   }
 
 
-db.on('connected',() => {
-    console.log('Connected to MongoDB');
-});
+// db.on('connected',() => {
+//     console.log('Connected to MongoDB');
+// });
 
-db.on('error',() => {
-    console.log('Error while connecting to MongoDB');
-});
+// db.on('error',() => {
+//     console.log('Error while connecting to MongoDB');
+// });
 
-db.on('disconnected',() => {
-    console.log('Disconnected to MongoDB');
-});
+// db.on('disconnected',() => {
+//     console.log('Disconnected to MongoDB');
+// });
 
 module.exports = db;
